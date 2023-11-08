@@ -1,19 +1,9 @@
-let some: string;
+let some: unknown;
 some = 'Text';
 let str: string;
-str = some;
 
-export { };
+if (typeof some === 'string') {
+  str = some; 
+}
 
-    
-// або так:
-
-// let some: unknown;
-// some = 'Text';
-// let str: string;
-
-// if (typeof some === 'string') {
-//   str = some; 
-// }
-
-// export {};
+export {};
